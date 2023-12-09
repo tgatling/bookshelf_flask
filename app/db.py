@@ -1,23 +1,18 @@
-import os
-
-from flask import Flask
-import os
+from app import app
 import mysql.connector
 from dotenv import load_dotenv
-import secrets
+import os
 
-app = Flask(__name__)
-app.secret_key = secrets.token_hex(16)
-
-load_dotenv()
 
 try:
+    load_dotenv()
+
     # Connect to MySQL database
     db = mysql.connector.connect(
-        host=os.getenv('DB_HOST'),
-        user=os.getenv('DB_USER'),
-        password=os.getenv('DB_PASSWORD'),
-        database=os.getenv('DB_NAME')
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        database=os.getenv("DB_NAME")
     )
 
     cursor = db.cursor()
@@ -47,3 +42,7 @@ try:
 
 except mysql.connector.Error as e:
     print(f"Error connecting to the database: {e}")
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
