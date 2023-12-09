@@ -2,7 +2,9 @@ from app import app
 import mysql.connector
 from dotenv import load_dotenv
 import os
+import secrets
 
+app.secret_key = secrets.token_hex(16)
 
 try:
     load_dotenv()
