@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_index.css') }}">
+</head>
+<body>
+<h1>Add Book</h1>
+
+<form method="POST" action="{{ url_for('add_book') }}">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="author_first_name">Author First Name:</label>
+    <input type="text" id="author_first_name" name="author_first_name" required>
+
+    <label for="author_last_name">Author Last Name:</label>
+    <input type="text" id="author_last_name" name="author_last_name" required>
+
+    <label for="media">Media:</label>
+    <select id="media" name="media">
+        <option value="Audiobook">Audiobook</option>
+        <option value="Ebook">Ebook</option>
+        <option value="Physical">Physical</option>
+    </select>
+
+    <label class="read-status-container">Status:
+        <input type="radio" id="read" name="read_status" value="1">
+        <label for="read">Read</label>
+
+        <input type="radio" id="unread" name="read_status" value="0" checked>
+        <label for="unread">Unread</label>
+    </label>
+
+    <button type="submit">Add Book</button>
+</form>
+
+<form action="{{ url_for('display_books') }}">
+    <button type="submit">Display Books</button>
+</form>
+</body>
+</html>

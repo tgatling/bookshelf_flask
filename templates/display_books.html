@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_display_books.css') }}">
+</head>
+<body>
+    <h1>Book List</h1>
+
+    <h2>Physical Books:</h2>
+    {% if books|selectattr('media', 'equalto', 'Physical')|list %}
+        <ul>
+            {% for book in books if book.media == 'Physical' %}
+                <li>{{ book.title }} by {{ book.author_first_name }} {{ book.author_last_name }} - {% if book.read_status %}Read{% else %}Unread{% endif %}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are currently no physical books in your collection.</p>
+    {% endif %}
+
+    <h2>Ebooks:</h2>
+    {% if books|selectattr('media', 'equalto', 'Ebook')|list %}
+        <ul>
+            {% for book in books if book.media == 'Ebook' %}
+                <li>{{ book.title }} by {{ book.author_first_name }} {{ book.author_last_name }} - {% if book.read_status %}Read{% else %}Unread{% endif %}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are currently no ebooks in your collection.</p>
+    {% endif %}
+
+    <h2>Audiobooks:</h2>
+    {% if books|selectattr('media', 'equalto', 'Audiobook')|list %}
+        <ul>
+            {% for book in books if book.media == 'Audiobook' %}
+                <li>{{ book.title }} by {{ book.author_first_name }} {{ book.author_last_name }} - {% if book.read_status %}Read{% else %}Unread{% endif %}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are currently no audiobooks in your collection.</p>
+    {% endif %}
+
+    <form action="{{ url_for('index') }}">
+        <button type="submit">Back</button>
+    </form>
+</body>
+</html>
