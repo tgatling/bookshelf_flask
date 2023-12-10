@@ -14,9 +14,14 @@ def add_book():
     author_first_name = request.form['author_first_name']
     author_last_name = request.form['author_last_name']
     read_status = int(request.form.get('read_status', 0))  # Convert to integer (1 for "Read", 0 for "Unread")
-    media = request.form['media']
+    isbn = request.form['isbn']
+    description = request.form['description']
+    image_url = request.form['image_url']
+    external_url = request.form['external_url']
+    media_id = int(request.form.get('media_id', 0))
+    genre_id = int(request.form.get('genre_id', 0))
 
-    if title and author_first_name and author_last_name:
+    if title and author_first_name and author_last_name and isbn and description and media_id:
         # Check if author already exists
         cursor.execute(
             "SELECT author_id FROM authors WHERE first_name = %s AND last_name = %s",
@@ -41,16 +46,16 @@ def add_book():
         # Insert book into the database
         query = """
             INSERT INTO books 
-            (title, author_id, read_status, media) 
-            VALUES (%s, %s, %s, %s)
+            (title, author_id, read_status, isbn, description, image_url, external_url, media_id, genre_id) 
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
         """
-        values = (title, author_id, read_status, media)
+        values = (title, author_id, read_status, isbn, description, image_url, external_url, media_id, genre_id)
         cursor.execute(query, values)
         db.commit()
 
         flash("Book added successfully!", "success")
     else:
-        flash("Please fill in title and author fields.", "warning")
+        flash("Please fill in all required fields.", "warning")
 
     return redirect(url_for('index'))
 
@@ -59,10 +64,13 @@ def add_book():
 def display_books():
     # Retrieve books from the database with author information
     cursor.execute("""
-        SELECT books.title, authors.first_name, authors.last_name, books.read_status, books.media 
-        FROM books 
-        JOIN authors ON books.author_id = authors.author_id
-    """)
+            SELECT books.title, authors.first_name, authors.last_name, books.read_status, books.isbn, 
+                   books.description, books.image_url, books.external_url, media.media_name, genres.genre_name
+            FROM books 
+            JOIN authors ON books.author_id = authors.author_id
+            JOIN media ON books.media_id = media.media_id
+            JOIN genres ON books.genre_id = genres.genre_id
+        """)
     books_data = cursor.fetchall()
 
     books = [
