@@ -98,13 +98,11 @@ def add_book():
 def display_books():
     # Retrieve books from the database with author information
     cursor.execute("""
-            SELECT books.title, authors.first_name, authors.last_name, books.read_status, books.isbn, 
-                   books.description, books.image_url, books.external_url, media.media_name, genres.genre_name
-            FROM books 
-            JOIN authors ON books.author_id = authors.author_id
-            JOIN media ON books.media_id = media.media_id
-            JOIN genres ON books.genre_id = genres.genre_id
-        """)
+        SELECT books.title, authors.first_name, authors.last_name, books.read_status, media.media_name
+        FROM books 
+        JOIN authors ON books.author_id = authors.author_id
+        JOIN media ON books.media_id = media.media_id
+    """)
     books_data = cursor.fetchall()
 
     books = [
