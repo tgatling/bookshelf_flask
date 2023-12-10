@@ -19,6 +19,24 @@ try:
 
     cursor = db.cursor()
 
+    # Create media table if not exists
+    cursor.execute("""
+            CREATE TABLE IF NOT EXISTS media (
+                media_id INT AUTO_INCREMENT PRIMARY KEY,
+                media_name VARCHAR(255) NOT NULL
+            )
+        """)
+    db.commit()
+
+    # Create genres table if not exists
+    cursor.execute("""
+            CREATE TABLE IF NOT EXISTS genres (
+                genre_id INT AUTO_INCREMENT PRIMARY KEY,
+                genre_name VARCHAR(255) NOT NULL
+            )
+        """)
+    db.commit()
+
     # Create authors table if not exists
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS authors (
@@ -36,8 +54,15 @@ try:
             title VARCHAR(255),
             author_id INT,
             read_status BOOLEAN,
-            media VARCHAR(20),
-            FOREIGN KEY (author_id) REFERENCES authors(author_id)
+            isbn VARCHAR(20),
+            description TEXT,
+            image_url VARCHAR(255),
+            external_url VARCHAR(255),
+            media_id INT,
+            genre_id INT,
+            FOREIGN KEY (author_id) REFERENCES authors(author_id),
+            FOREIGN KEY (media_id) REFERENCES media(media_id),
+            FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
         )
     """)
     db.commit()
