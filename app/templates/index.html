@@ -9,21 +9,59 @@
 <body>
 <h1>Add Book</h1>
 
-<form method="POST" action="{{ url_for('add_book') }}">
+<form method="POST" action="{{ url_for('add_book') }}" id="bookForm">
     <label for="title">Title:</label>
     <input type="text" id="title" name="title" required>
 
-    <label for="author_first_name">Author First Name:</label>
-    <input type="text" id="author_first_name" name="author_first_name" required>
+    <button type="button" id="toggleAuthorBtn" onclick="toggleAuthorFields()">Add New Author</button>
 
-    <label for="author_last_name">Author Last Name:</label>
-    <input type="text" id="author_last_name" name="author_last_name" required>
+    <div id="newAuthorFields" style="display: none;">
+        <label for="author_first_name">Author First Name:</label>
+        <input type="text" id="author_first_name" name="author_first_name" required>
+
+        <label for="author_last_name">Author Last Name:</label>
+        <input type="text" id="author_last_name" name="author_last_name" required>
+    </div>
+
+    <label for="existing_author">Select Existing Author:</label>
+    <select id="existing_author" name="existing_author">
+        {% for author in existing_authors %}
+            <option value="{{ author.author_id }}">{{ author.author_id }} - {{ author.author_first_name }} {{ author.author_last_name }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="isbn">ISBN:</label>
+    <input type="text" id="isbn" name="isbn">
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description"></textarea>
+
+    <label for="image_url">Image URL:</label>
+    <input type="text" id="image_url" name="image_url">
+
+    <label for="external_url">External URL:</label>
+    <input type="text" id="external_url" name="external_url">
 
     <label for="media">Media:</label>
     <select id="media" name="media">
         <option value="Audiobook">Audiobook</option>
         <option value="Ebook">Ebook</option>
         <option value="Physical">Physical</option>
+    </select>
+
+
+    <button type="button" id="toggleGenreBtn" onclick="toggleGenreFields()">Add New Genre</button>
+
+    <div id="newGenreField" style="display: none;">
+        <label for="new_genre">New Genre:</label>
+        <input type="text" id="new_genre" name="new_genre">
+    </div>
+
+    <label for="existing_genre">Select Existing Genre:</label>
+    <select id="existing_genre" name="existing_genre">
+        {% for genre in existing_genres %}
+            <option value="{{ genre.genre_id }}">{{ genre.genre_name }}</option>
+        {% endfor %}
     </select>
 
     <label class="read-status-container">Status:
@@ -40,5 +78,34 @@
 <form action="{{ url_for('display_books') }}">
     <button type="submit">Display Books</button>
 </form>
+
+<script>
+    function toggleAuthorFields() {
+        const newAuthorFields = document.getElementById('newAuthorFields');
+        const toggleBtn = document.getElementById('toggleAuthorBtn');
+
+        if (newAuthorFields.style.display === 'none') {
+            newAuthorFields.style.display = 'block';
+            toggleBtn.innerHTML = 'Add Existing Author';
+        } else {
+            newAuthorFields.style.display = 'none';
+            toggleBtn.innerHTML = 'Add New Author';
+        }
+    }
+
+    function toggleGenreFields() {
+        const newGenreField = document.getElementById('newGenreField');
+        const toggleBtn = document.getElementById('toggleGenreBtn');
+
+        if (newGenreField.style.display === 'none') {
+            newGenreField.style.display = 'block';
+            toggleBtn.innerHTML = 'Select Existing Genre';
+        } else {
+            newGenreField.style.display = 'none';
+            toggleBtn.innerHTML = 'Add New Genre';
+        }
+    }
+</script>
+
 </body>
 </html>
