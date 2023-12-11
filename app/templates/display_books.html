@@ -42,8 +42,9 @@
         <p>There are currently no audiobooks in your collection.</p>
     {% endif %}
 
-    <form action="{{ url_for('index') }}">
-        <button type="submit">Back</button>
-    </form>
+<form action="{{ url_for('home') }}">
+    <button class="styled-button" type="submit">Back to Home</button>
+</form>
+
 </body>
 </html>
