@@ -33,7 +33,8 @@ def add_book():
                 author_last_name = request.form['author_last_name']
 
                 # Print debug
-                logging.debug(f"In function add_books: Trying to get author_id for: {author_first_name} {author_last_name}")
+                logging.debug(
+                    f"In function add_books: Trying to get author_id for: {author_first_name} {author_last_name}")
 
                 author_id = get_author_id(author_first_name, author_last_name)
                 logging.debug(f"In function add_books: Retrieved author_id: {author_id}")
