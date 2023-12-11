@@ -1,0 +1,202 @@
+2023-12-10 20:01:53,380 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-10 20:01:53,380 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-10 20:01:53,382 - INFO -  * Restarting with stat
+2023-12-10 20:01:53,763 - WARNING -  * Debugger is active!
+2023-12-10 20:01:53,766 - INFO -  * Debugger PIN: 555-694-590
+2023-12-10 20:02:30,925 - INFO - 127.0.0.1 - - [10/Dec/2023 20:02:30] "GET / HTTP/1.1" 200 -
+2023-12-10 20:02:31,104 - INFO - 127.0.0.1 - - [10/Dec/2023 20:02:31] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 20:05:27,553 - INFO - 127.0.0.1 - - [10/Dec/2023 20:05:27] "[35m[1mPOST /add_book HTTP/1.1[0m" 500 -
+2023-12-10 20:05:27,578 - INFO - 127.0.0.1 - - [10/Dec/2023 20:05:27] "[36mGET /add_book?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-12-10 20:05:27,580 - INFO - 127.0.0.1 - - [10/Dec/2023 20:05:27] "[36mGET /add_book?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-12-10 20:05:27,654 - INFO - 127.0.0.1 - - [10/Dec/2023 20:05:27] "[36mGET /add_book?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-12-10 20:05:27,687 - INFO - 127.0.0.1 - - [10/Dec/2023 20:05:27] "[36mGET /add_book?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-12-10 20:06:34,626 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-10 20:06:34,626 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-10 20:06:34,628 - INFO -  * Restarting with stat
+2023-12-10 20:06:35,012 - WARNING -  * Debugger is active!
+2023-12-10 20:06:35,016 - INFO -  * Debugger PIN: 555-694-590
+2023-12-10 20:06:37,380 - INFO - 127.0.0.1 - - [10/Dec/2023 20:06:37] "GET / HTTP/1.1" 200 -
+2023-12-10 20:06:37,457 - INFO - 127.0.0.1 - - [10/Dec/2023 20:06:37] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 20:07:37,272 - DEBUG - In function add_books: Trying to get author_id for: Tequesha McKinnon
+2023-12-10 20:07:37,281 - DEBUG - In function add_books: Retrieved author_id: 11
+2023-12-10 20:07:37,288 - DEBUG - In function add_books: Selected Media ID: 2
+2023-12-10 20:07:37,289 - DEBUG - In function add_books: values: ('Bookshelf Project', 11, 1, '9780094859845938', 'Testing out my project and setting up logging.', 'www.project_image.com', 'www.goodreads.com/bookshelf_project', 2, 9)
+2023-12-10 20:07:37,322 - INFO - 127.0.0.1 - - [10/Dec/2023 20:07:37] "[32mPOST /add_book HTTP/1.1[0m" 302 -
+2023-12-10 20:07:37,326 - INFO - 127.0.0.1 - - [10/Dec/2023 20:07:37] "GET / HTTP/1.1" 200 -
+2023-12-10 20:07:37,660 - INFO - 127.0.0.1 - - [10/Dec/2023 20:07:37] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 20:08:33,395 - ERROR - In display_books function: Error retrieving and displaying books: 2055: Cursor is not connected
+2023-12-10 20:08:33,400 - INFO - 127.0.0.1 - - [10/Dec/2023 20:08:33] "[35m[1mGET /display_books HTTP/1.1[0m" 500 -
+2023-12-10 20:08:33,422 - INFO - 127.0.0.1 - - [10/Dec/2023 20:08:33] "[36mGET /display_books?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-12-10 20:08:33,672 - INFO - 127.0.0.1 - - [10/Dec/2023 20:08:33] "[36mGET /display_books?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-12-10 20:08:34,001 - INFO - 127.0.0.1 - - [10/Dec/2023 20:08:34] "[36mGET /display_books?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-12-10 21:02:37,299 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-10 21:02:37,300 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-10 21:02:37,301 - INFO -  * Restarting with stat
+2023-12-10 21:02:37,686 - WARNING -  * Debugger is active!
+2023-12-10 21:02:37,690 - INFO -  * Debugger PIN: 555-694-590
+2023-12-10 21:07:00,012 - INFO -  * Detected change in 'C:\\Users\\gatli\\all-repos\\GitHub-TG\\bookshelf\\app\\routes.py', reloading
+2023-12-10 21:07:00,112 - INFO -  * Restarting with stat
+2023-12-10 21:07:00,594 - WARNING -  * Debugger is active!
+2023-12-10 21:07:00,600 - INFO -  * Debugger PIN: 555-694-590
+2023-12-10 21:07:03,632 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-10 21:07:03,633 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-10 21:07:03,634 - INFO -  * Restarting with stat
+2023-12-10 21:07:04,034 - WARNING -  * Debugger is active!
+2023-12-10 21:07:04,036 - INFO -  * Debugger PIN: 555-694-590
+2023-12-10 21:07:19,924 - INFO - 127.0.0.1 - - [10/Dec/2023 21:07:19] "GET / HTTP/1.1" 200 -
+2023-12-10 21:07:20,260 - INFO - 127.0.0.1 - - [10/Dec/2023 21:07:20] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 21:08:01,893 - DEBUG - In function add_books: Trying to get author_id for: First Name
+2023-12-10 21:08:01,925 - DEBUG - In function add_books: Retrieved author_id: None
+2023-12-10 21:08:01,938 - DEBUG - In function add_books: Inserted author_id: 14
+2023-12-10 21:08:01,943 - DEBUG - In function add_books: genre_id: 12
+2023-12-10 21:08:01,945 - DEBUG - In function add_books: Selected Media ID: 1
+2023-12-10 21:08:01,945 - DEBUG - In function add_books: values: ('Name of the Book', 14, 0, '89437923475892398', 'Description of the book', '', '', 1, 12)
+2023-12-10 21:08:01,950 - INFO - In function add_books: Book added successfully! ('Name of the Book', 14, 0, '89437923475892398', 'Description of the book', '', '', 1, 12)
+2023-12-10 21:08:01,950 - INFO - 127.0.0.1 - - [10/Dec/2023 21:08:01] "[32mPOST /add_book HTTP/1.1[0m" 302 -
+2023-12-10 21:08:01,956 - INFO - 127.0.0.1 - - [10/Dec/2023 21:08:01] "GET / HTTP/1.1" 200 -
+2023-12-10 21:08:02,288 - INFO - 127.0.0.1 - - [10/Dec/2023 21:08:02] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 21:08:17,659 - ERROR - In display_books function: Error retrieving and displaying books: 2055: Cursor is not connected
+2023-12-10 21:08:17,667 - INFO - 127.0.0.1 - - [10/Dec/2023 21:08:17] "[35m[1mGET /display_books HTTP/1.1[0m" 500 -
+2023-12-10 21:08:17,692 - INFO - 127.0.0.1 - - [10/Dec/2023 21:08:17] "[36mGET /display_books?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-12-10 21:08:18,010 - INFO - 127.0.0.1 - - [10/Dec/2023 21:08:18] "[36mGET /display_books?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-12-10 21:08:18,378 - INFO - 127.0.0.1 - - [10/Dec/2023 21:08:18] "[36mGET /display_books?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-12-10 21:20:50,792 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-10 21:20:50,792 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-10 21:20:50,794 - INFO -  * Restarting with stat
+2023-12-10 21:20:51,238 - WARNING -  * Debugger is active!
+2023-12-10 21:20:51,242 - INFO -  * Debugger PIN: 555-694-590
+2023-12-10 21:20:56,818 - DEBUG - In display_books function: Books data from the database: [('title', 'Harper', 'Lee', 0, 'Audiobook'), ('title', 'Harper', 'Lee', 0, 'Audiobook'), ('TESTING', 'TESTING', 'TESTING', 0, 'Audiobook'), ('Test the program', 'sdalfjksdfkla', 'nksdafkjsdf', 0, 'Audiobook'), ('jlkjlkj', 'bmbnmb', 'bnbmvnv', 1, 'Audiobook'), ('Name of the Book', 'First', 'Name', 0, 'Audiobook'), ('The Covenant of Water', 'Abraham', 'Verghese', 0, 'Ebook'), ('Bookshelf Project', 'Tequesha', 'McKinnon', 1, 'Ebook'), ('Test Book', 'Tequesha', 'McKinnon', 1, 'Physical')]
+2023-12-10 21:20:56,819 - DEBUG - In display_books function: Processed books for display: [{'title': 'title', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'title', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'TESTING', 'author_first_name': 'TESTING', 'author_last_name': 'TESTING', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'Test the program', 'author_first_name': 'sdalfjksdfkla', 'author_last_name': 'nksdafkjsdf', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'jlkjlkj', 'author_first_name': 'bmbnmb', 'author_last_name': 'bnbmvnv', 'read_status': 1, 'media': 'Audiobook'}, {'title': 'Name of the Book', 'author_first_name': 'First', 'author_last_name': 'Name', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'The Covenant of Water', 'author_first_name': 'Abraham', 'author_last_name': 'Verghese', 'read_status': 0, 'media': 'Ebook'}, {'title': 'Bookshelf Project', 'author_first_name': 'Tequesha', 'author_last_name': 'McKinnon', 'read_status': 1, 'media': 'Ebook'}, {'title': 'Test Book', 'author_first_name': 'Tequesha', 'author_last_name': 'McKinnon', 'read_status': 1, 'media': 'Physical'}]
+2023-12-10 21:20:56,839 - INFO - 127.0.0.1 - - [10/Dec/2023 21:20:56] "GET /display_books HTTP/1.1" 200 -
+2023-12-10 21:20:56,948 - INFO - 127.0.0.1 - - [10/Dec/2023 21:20:56] "[36mGET /static/styles_display_books.css HTTP/1.1[0m" 304 -
+2023-12-10 21:21:00,353 - INFO - 127.0.0.1 - - [10/Dec/2023 21:21:00] "GET / HTTP/1.1" 200 -
+2023-12-10 21:21:00,656 - INFO - 127.0.0.1 - - [10/Dec/2023 21:21:00] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 21:21:27,043 - DEBUG - In function add_books: Trying to get author_id for: sdfsfasf dsafdfsdgdf
+2023-12-10 21:21:27,045 - DEBUG - In function add_books: Retrieved author_id: None
+2023-12-10 21:21:27,052 - DEBUG - In function add_books: Inserted author_id: 15
+2023-12-10 21:21:27,053 - DEBUG - In function add_books: Selected Media ID: 1
+2023-12-10 21:21:27,053 - DEBUG - In function add_books: values: ('Another Test', 15, 0, '9780061120084', '', '', '', 1, 12)
+2023-12-10 21:21:27,058 - INFO - In function add_books: Book added successfully! ('Another Test', 15, 0, '9780061120084', '', '', '', 1, 12)
+2023-12-10 21:21:27,058 - INFO - 127.0.0.1 - - [10/Dec/2023 21:21:27] "[32mPOST /add_book HTTP/1.1[0m" 302 -
+2023-12-10 21:21:27,063 - INFO - 127.0.0.1 - - [10/Dec/2023 21:21:27] "GET / HTTP/1.1" 200 -
+2023-12-10 21:21:27,397 - INFO - 127.0.0.1 - - [10/Dec/2023 21:21:27] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 21:21:29,646 - ERROR - In display_books function: Error retrieving and displaying books: 2055: Cursor is not connected
+2023-12-10 21:21:29,669 - INFO - 127.0.0.1 - - [10/Dec/2023 21:21:29] "[35m[1mGET /display_books HTTP/1.1[0m" 500 -
+2023-12-10 21:21:29,959 - INFO - 127.0.0.1 - - [10/Dec/2023 21:21:29] "[36mGET /display_books?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2023-12-10 21:21:30,005 - INFO - 127.0.0.1 - - [10/Dec/2023 21:21:30] "[36mGET /display_books?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2023-12-10 21:21:30,334 - INFO - 127.0.0.1 - - [10/Dec/2023 21:21:30] "[36mGET /display_books?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-12-10 21:21:30,601 - INFO - 127.0.0.1 - - [10/Dec/2023 21:21:30] "[36mGET /display_books?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2023-12-10 21:22:00,863 - INFO -  * Detected change in 'C:\\Users\\gatli\\all-repos\\GitHub-TG\\bookshelf\\app\\routes.py', reloading
+2023-12-10 21:22:00,922 - INFO -  * Restarting with stat
+2023-12-10 21:22:01,356 - WARNING -  * Debugger is active!
+2023-12-10 21:22:01,360 - INFO -  * Debugger PIN: 555-694-590
+2023-12-10 21:22:23,904 - INFO -  * Detected change in 'C:\\Users\\gatli\\all-repos\\GitHub-TG\\bookshelf\\run.py', reloading
+2023-12-10 21:22:23,997 - INFO -  * Restarting with stat
+2023-12-10 21:22:34,936 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-10 21:22:34,936 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-10 21:22:52,593 - DEBUG - In display_books function: Books data from the database: [('title', 'Harper', 'Lee', 0, 'Audiobook'), ('title', 'Harper', 'Lee', 0, 'Audiobook'), ('TESTING', 'TESTING', 'TESTING', 0, 'Audiobook'), ('Test the program', 'sdalfjksdfkla', 'nksdafkjsdf', 0, 'Audiobook'), ('jlkjlkj', 'bmbnmb', 'bnbmvnv', 1, 'Audiobook'), ('Name of the Book', 'First', 'Name', 0, 'Audiobook'), ('Another Test', 'sdfsfasf', 'dsafdfsdgdf', 0, 'Audiobook'), ('The Covenant of Water', 'Abraham', 'Verghese', 0, 'Ebook'), ('Bookshelf Project', 'Tequesha', 'McKinnon', 1, 'Ebook'), ('Test Book', 'Tequesha', 'McKinnon', 1, 'Physical')]
+2023-12-10 21:22:52,593 - DEBUG - In display_books function: Processed books for display: [{'title': 'title', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'title', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'TESTING', 'author_first_name': 'TESTING', 'author_last_name': 'TESTING', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'Test the program', 'author_first_name': 'sdalfjksdfkla', 'author_last_name': 'nksdafkjsdf', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'jlkjlkj', 'author_first_name': 'bmbnmb', 'author_last_name': 'bnbmvnv', 'read_status': 1, 'media': 'Audiobook'}, {'title': 'Name of the Book', 'author_first_name': 'First', 'author_last_name': 'Name', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'Another Test', 'author_first_name': 'sdfsfasf', 'author_last_name': 'dsafdfsdgdf', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'The Covenant of Water', 'author_first_name': 'Abraham', 'author_last_name': 'Verghese', 'read_status': 0, 'media': 'Ebook'}, {'title': 'Bookshelf Project', 'author_first_name': 'Tequesha', 'author_last_name': 'McKinnon', 'read_status': 1, 'media': 'Ebook'}, {'title': 'Test Book', 'author_first_name': 'Tequesha', 'author_last_name': 'McKinnon', 'read_status': 1, 'media': 'Physical'}]
+2023-12-10 21:22:52,610 - INFO - 127.0.0.1 - - [10/Dec/2023 21:22:52] "GET /display_books HTTP/1.1" 200 -
+2023-12-10 21:22:52,669 - INFO - 127.0.0.1 - - [10/Dec/2023 21:22:52] "[36mGET /static/styles_display_books.css HTTP/1.1[0m" 304 -
+2023-12-10 21:23:02,679 - DEBUG - In display_books function: Books data from the database: [('title', 'Harper', 'Lee', 0, 'Audiobook'), ('title', 'Harper', 'Lee', 0, 'Audiobook'), ('TESTING', 'TESTING', 'TESTING', 0, 'Audiobook'), ('Test the program', 'sdalfjksdfkla', 'nksdafkjsdf', 0, 'Audiobook'), ('jlkjlkj', 'bmbnmb', 'bnbmvnv', 1, 'Audiobook'), ('Name of the Book', 'First', 'Name', 0, 'Audiobook'), ('Another Test', 'sdfsfasf', 'dsafdfsdgdf', 0, 'Audiobook'), ('The Covenant of Water', 'Abraham', 'Verghese', 0, 'Ebook'), ('Bookshelf Project', 'Tequesha', 'McKinnon', 1, 'Ebook'), ('Test Book', 'Tequesha', 'McKinnon', 1, 'Physical')]
+2023-12-10 21:23:02,679 - DEBUG - In display_books function: Processed books for display: [{'title': 'title', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'title', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'TESTING', 'author_first_name': 'TESTING', 'author_last_name': 'TESTING', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'Test the program', 'author_first_name': 'sdalfjksdfkla', 'author_last_name': 'nksdafkjsdf', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'jlkjlkj', 'author_first_name': 'bmbnmb', 'author_last_name': 'bnbmvnv', 'read_status': 1, 'media': 'Audiobook'}, {'title': 'Name of the Book', 'author_first_name': 'First', 'author_last_name': 'Name', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'Another Test', 'author_first_name': 'sdfsfasf', 'author_last_name': 'dsafdfsdgdf', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'The Covenant of Water', 'author_first_name': 'Abraham', 'author_last_name': 'Verghese', 'read_status': 0, 'media': 'Ebook'}, {'title': 'Bookshelf Project', 'author_first_name': 'Tequesha', 'author_last_name': 'McKinnon', 'read_status': 1, 'media': 'Ebook'}, {'title': 'Test Book', 'author_first_name': 'Tequesha', 'author_last_name': 'McKinnon', 'read_status': 1, 'media': 'Physical'}]
+2023-12-10 21:23:02,680 - INFO - 127.0.0.1 - - [10/Dec/2023 21:23:02] "GET /display_books HTTP/1.1" 200 -
+2023-12-10 21:23:02,699 - INFO - 127.0.0.1 - - [10/Dec/2023 21:23:02] "[36mGET /static/styles_display_books.css HTTP/1.1[0m" 304 -
+2023-12-10 21:23:32,183 - INFO - 127.0.0.1 - - [10/Dec/2023 21:23:32] "GET / HTTP/1.1" 200 -
+2023-12-10 21:23:32,209 - INFO - 127.0.0.1 - - [10/Dec/2023 21:23:32] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 21:24:11,722 - DEBUG - In function add_books: Trying to get author_id for: sdfsafasfs asfsdfdsfa
+2023-12-10 21:24:11,724 - DEBUG - In function add_books: Retrieved author_id: None
+2023-12-10 21:24:11,731 - DEBUG - In function add_books: Inserted author_id: 16
+2023-12-10 21:24:11,732 - DEBUG - In function add_books: Selected Media ID: 1
+2023-12-10 21:24:11,732 - DEBUG - In function add_books: values: ('This is a Test', 16, 0, '9780061120084', 'dsfadfsf', '', '', 1, 12)
+2023-12-10 21:24:11,736 - INFO - In function add_books: Book added successfully! ('This is a Test', 16, 0, '9780061120084', 'dsfadfsf', '', '', 1, 12)
+2023-12-10 21:24:11,736 - INFO - 127.0.0.1 - - [10/Dec/2023 21:24:11] "[32mPOST /add_book HTTP/1.1[0m" 302 -
+2023-12-10 21:24:11,743 - INFO - 127.0.0.1 - - [10/Dec/2023 21:24:11] "GET / HTTP/1.1" 200 -
+2023-12-10 21:24:11,974 - INFO - 127.0.0.1 - - [10/Dec/2023 21:24:11] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 21:24:29,894 - ERROR - In display_books function: Error retrieving and displaying books: 2055: Cursor is not connected
+2023-12-10 21:24:29,894 - ERROR - Exception on /display_books [GET]
+Traceback (most recent call last):
+  File "C:\Users\gatli\PycharmProjects\Bookshelf\venv\Lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gatli\PycharmProjects\Bookshelf\venv\Lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    return self.finalize_request(rv)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gatli\PycharmProjects\Bookshelf\venv\Lib\site-packages\flask\app.py", line 889, in finalize_request
+    response = self.make_response(rv)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gatli\PycharmProjects\Bookshelf\venv\Lib\site-packages\flask\app.py", line 1161, in make_response
+    raise TypeError(
+TypeError: The view function for 'display_books' did not return a valid response. The function either returned None or ended without a return statement.
+2023-12-10 21:24:29,896 - INFO - 127.0.0.1 - - [10/Dec/2023 21:24:29] "[35m[1mGET /display_books HTTP/1.1[0m" 500 -
+2023-12-10 21:49:44,564 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-10 21:49:44,564 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-10 21:49:50,247 - INFO - 127.0.0.1 - - [10/Dec/2023 21:49:50] "GET / HTTP/1.1" 200 -
+2023-12-10 21:49:50,534 - INFO - 127.0.0.1 - - [10/Dec/2023 21:49:50] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 21:50:15,086 - DEBUG - In function add_books: Trying to get author_id for: First Wells
+2023-12-10 21:50:15,095 - DEBUG - In function add_books: Retrieved author_id: None
+2023-12-10 21:50:15,104 - DEBUG - In function add_books: Inserted author_id: 17
+2023-12-10 21:50:15,107 - DEBUG - In function add_books: Selected Media ID: 1
+2023-12-10 21:50:15,107 - DEBUG - In function add_books: values: ('This Book', 17, 0, '', '', '', '', 1, 12)
+2023-12-10 21:50:15,112 - INFO - In function add_books: Book added successfully! ('This Book', 17, 0, '', '', '', '', 1, 12)
+2023-12-10 21:50:15,114 - INFO - 127.0.0.1 - - [10/Dec/2023 21:50:15] "[32mPOST /add_book HTTP/1.1[0m" 302 -
+2023-12-10 21:50:15,120 - INFO - 127.0.0.1 - - [10/Dec/2023 21:50:15] "GET / HTTP/1.1" 200 -
+2023-12-10 21:50:15,441 - INFO - 127.0.0.1 - - [10/Dec/2023 21:50:15] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 21:50:18,059 - DEBUG - In display_books function: Books data from the database: [('title', 'Harper', 'Lee', 0, 'Audiobook'), ('title', 'Harper', 'Lee', 0, 'Audiobook'), ('TESTING', 'TESTING', 'TESTING', 0, 'Audiobook'), ('Test the program', 'sdalfjksdfkla', 'nksdafkjsdf', 0, 'Audiobook'), ('jlkjlkj', 'bmbnmb', 'bnbmvnv', 1, 'Audiobook'), ('Name of the Book', 'First', 'Name', 0, 'Audiobook'), ('Another Test', 'sdfsfasf', 'dsafdfsdgdf', 0, 'Audiobook'), ('This is a Test', 'sdfsafasfs', 'asfsdfdsfa', 0, 'Audiobook'), ('This Book', 'First', 'Wells', 0, 'Audiobook'), ('The Covenant of Water', 'Abraham', 'Verghese', 0, 'Ebook'), ('Bookshelf Project', 'Tequesha', 'McKinnon', 1, 'Ebook'), ('Test Book', 'Tequesha', 'McKinnon', 1, 'Physical')]
+2023-12-10 21:50:18,059 - DEBUG - In display_books function: Processed books for display: [{'title': 'title', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'title', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'TESTING', 'author_first_name': 'TESTING', 'author_last_name': 'TESTING', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'Test the program', 'author_first_name': 'sdalfjksdfkla', 'author_last_name': 'nksdafkjsdf', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'jlkjlkj', 'author_first_name': 'bmbnmb', 'author_last_name': 'bnbmvnv', 'read_status': 1, 'media': 'Audiobook'}, {'title': 'Name of the Book', 'author_first_name': 'First', 'author_last_name': 'Name', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'Another Test', 'author_first_name': 'sdfsfasf', 'author_last_name': 'dsafdfsdgdf', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'This is a Test', 'author_first_name': 'sdfsafasfs', 'author_last_name': 'asfsdfdsfa', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'This Book', 'author_first_name': 'First', 'author_last_name': 'Wells', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'The Covenant of Water', 'author_first_name': 'Abraham', 'author_last_name': 'Verghese', 'read_status': 0, 'media': 'Ebook'}, {'title': 'Bookshelf Project', 'author_first_name': 'Tequesha', 'author_last_name': 'McKinnon', 'read_status': 1, 'media': 'Ebook'}, {'title': 'Test Book', 'author_first_name': 'Tequesha', 'author_last_name': 'McKinnon', 'read_status': 1, 'media': 'Physical'}]
+2023-12-10 21:50:18,071 - INFO - 127.0.0.1 - - [10/Dec/2023 21:50:18] "GET /display_books HTTP/1.1" 200 -
+2023-12-10 21:50:18,362 - INFO - 127.0.0.1 - - [10/Dec/2023 21:50:18] "[36mGET /static/styles_display_books.css HTTP/1.1[0m" 304 -
+2023-12-10 21:50:56,743 - INFO - 127.0.0.1 - - [10/Dec/2023 21:50:56] "GET / HTTP/1.1" 200 -
+2023-12-10 21:50:56,760 - INFO - 127.0.0.1 - - [10/Dec/2023 21:50:56] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 21:50:58,582 - DEBUG - In display_books function: Books data from the database: [('title', 'Harper', 'Lee', 0, 'Audiobook'), ('title', 'Harper', 'Lee', 0, 'Audiobook'), ('TESTING', 'TESTING', 'TESTING', 0, 'Audiobook'), ('Test the program', 'sdalfjksdfkla', 'nksdafkjsdf', 0, 'Audiobook'), ('jlkjlkj', 'bmbnmb', 'bnbmvnv', 1, 'Audiobook'), ('Name of the Book', 'First', 'Name', 0, 'Audiobook'), ('Another Test', 'sdfsfasf', 'dsafdfsdgdf', 0, 'Audiobook'), ('This is a Test', 'sdfsafasfs', 'asfsdfdsfa', 0, 'Audiobook'), ('This Book', 'First', 'Wells', 0, 'Audiobook'), ('The Covenant of Water', 'Abraham', 'Verghese', 0, 'Ebook'), ('Bookshelf Project', 'Tequesha', 'McKinnon', 1, 'Ebook'), ('Test Book', 'Tequesha', 'McKinnon', 1, 'Physical')]
+2023-12-10 21:50:58,582 - DEBUG - In display_books function: Processed books for display: [{'title': 'title', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'title', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'TESTING', 'author_first_name': 'TESTING', 'author_last_name': 'TESTING', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'Test the program', 'author_first_name': 'sdalfjksdfkla', 'author_last_name': 'nksdafkjsdf', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'jlkjlkj', 'author_first_name': 'bmbnmb', 'author_last_name': 'bnbmvnv', 'read_status': 1, 'media': 'Audiobook'}, {'title': 'Name of the Book', 'author_first_name': 'First', 'author_last_name': 'Name', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'Another Test', 'author_first_name': 'sdfsfasf', 'author_last_name': 'dsafdfsdgdf', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'This is a Test', 'author_first_name': 'sdfsafasfs', 'author_last_name': 'asfsdfdsfa', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'This Book', 'author_first_name': 'First', 'author_last_name': 'Wells', 'read_status': 0, 'media': 'Audiobook'}, {'title': 'The Covenant of Water', 'author_first_name': 'Abraham', 'author_last_name': 'Verghese', 'read_status': 0, 'media': 'Ebook'}, {'title': 'Bookshelf Project', 'author_first_name': 'Tequesha', 'author_last_name': 'McKinnon', 'read_status': 1, 'media': 'Ebook'}, {'title': 'Test Book', 'author_first_name': 'Tequesha', 'author_last_name': 'McKinnon', 'read_status': 1, 'media': 'Physical'}]
+2023-12-10 21:50:58,583 - INFO - 127.0.0.1 - - [10/Dec/2023 21:50:58] "GET /display_books HTTP/1.1" 200 -
+2023-12-10 21:50:58,892 - INFO - 127.0.0.1 - - [10/Dec/2023 21:50:58] "[36mGET /static/styles_display_books.css HTTP/1.1[0m" 304 -
+2023-12-10 21:55:52,560 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-10 21:55:52,560 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-10 22:02:48,094 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-10 22:02:48,094 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-10 22:02:57,048 - INFO - 127.0.0.1 - - [10/Dec/2023 22:02:57] "GET / HTTP/1.1" 200 -
+2023-12-10 22:02:57,353 - INFO - 127.0.0.1 - - [10/Dec/2023 22:02:57] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 22:04:28,268 - DEBUG - In function add_books: Trying to get author_id for: Harper Lee
+2023-12-10 22:04:28,272 - DEBUG - In function add_books: Retrieved author_id: None
+2023-12-10 22:04:28,279 - DEBUG - In function add_books: Inserted author_id: 1
+2023-12-10 22:04:28,292 - DEBUG - In function add_books: genre_id: 1
+2023-12-10 22:04:28,293 - DEBUG - In function add_books: Selected Media ID: 3
+2023-12-10 22:04:28,294 - DEBUG - In function add_books: values: ('To Kill a Mockingbird', 1, 1, '9780061120084', 'The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. "To Kill A Mockingbird" became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.\r\n\r\nCompassionate, dramatic, and deeply moving, "To Kill A Mockingbird" takes readers to the roots of human behavior - to innocence and experience, kindness and cruelty, love and hatred, humor and pathos. Now with over 18 million copies in print and translated into forty languages, this regional story by a young Alabama woman claims universal appeal. Harper Lee always considered her book to be a simple love story. Today it is regarded as a masterpiece of American literature.\r\n', 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1553383690i/2657.jpg', 'https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird', 3, 1)
+2023-12-10 22:04:28,308 - ERROR - In function add_books: Error: 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`bookshelf`.`books`, CONSTRAINT `books_ibfk_3` FOREIGN KEY (`genre_id`) REFERENCES `genre` (`genre_id`))
+2023-12-10 22:04:28,309 - INFO - 127.0.0.1 - - [10/Dec/2023 22:04:28] "[32mPOST /add_book HTTP/1.1[0m" 302 -
+2023-12-10 22:04:28,321 - INFO - 127.0.0.1 - - [10/Dec/2023 22:04:28] "GET / HTTP/1.1" 200 -
+2023-12-10 22:04:28,655 - INFO - 127.0.0.1 - - [10/Dec/2023 22:04:28] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 22:15:50,135 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-12-10 22:15:50,136 - INFO - [33mPress CTRL+C to quit[0m
+2023-12-10 22:17:04,623 - DEBUG - In function add_books: Trying to get author_id for: Harper Lee
+2023-12-10 22:17:04,625 - DEBUG - In function add_books: Retrieved author_id: None
+2023-12-10 22:17:04,631 - DEBUG - In function add_books: Inserted author_id: 1
+2023-12-10 22:17:04,636 - DEBUG - In function add_books: genre_id: 1
+2023-12-10 22:17:04,637 - DEBUG - In function add_books: Selected Media ID: None
+2023-12-10 22:17:04,637 - DEBUG - In function add_books: values: ('To Kill A Mockingbird', 1, 1, '9780061120084', 'The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. "To Kill A Mockingbird" became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.\r\n\r\nCompassionate, dramatic, and deeply moving, "To Kill A Mockingbird" takes readers to the roots of human behavior - to innocence and experience, kindness and cruelty, love and hatred, humor and pathos. Now with over 18 million copies in print and translated into forty languages, this regional story by a young Alabama woman claims universal appeal. Harper Lee always considered her book to be a simple love story. Today it is regarded as a masterpiece of American literature.', 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1553383690i/2657.jpg', 'https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird', None, 1)
+2023-12-10 22:17:04,644 - INFO - In function add_books: Book added successfully! ('To Kill A Mockingbird', 1, 1, '9780061120084', 'The unforgettable novel of a childhood in a sleepy Southern town and the crisis of conscience that rocked it. "To Kill A Mockingbird" became both an instant bestseller and a critical success when it was first published in 1960. It went on to win the Pulitzer Prize in 1961 and was later made into an Academy Award-winning film, also a classic.\r\n\r\nCompassionate, dramatic, and deeply moving, "To Kill A Mockingbird" takes readers to the roots of human behavior - to innocence and experience, kindness and cruelty, love and hatred, humor and pathos. Now with over 18 million copies in print and translated into forty languages, this regional story by a young Alabama woman claims universal appeal. Harper Lee always considered her book to be a simple love story. Today it is regarded as a masterpiece of American literature.', 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1553383690i/2657.jpg', 'https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird', None, 1)
+2023-12-10 22:17:04,645 - INFO - 127.0.0.1 - - [10/Dec/2023 22:17:04] "[32mPOST /add_book HTTP/1.1[0m" 302 -
+2023-12-10 22:17:04,662 - INFO - 127.0.0.1 - - [10/Dec/2023 22:17:04] "GET / HTTP/1.1" 200 -
+2023-12-10 22:17:04,931 - INFO - 127.0.0.1 - - [10/Dec/2023 22:17:04] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 22:23:13,839 - DEBUG - In display_books function: Books data from the database: [('To Kill A Mockingbird', 'Harper', 'Lee', 1, 'Audiobook')]
+2023-12-10 22:23:13,840 - DEBUG - In display_books function: Processed books for display: [{'title': 'To Kill A Mockingbird', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 1, 'media': 'Audiobook'}]
+2023-12-10 22:23:13,871 - INFO - 127.0.0.1 - - [10/Dec/2023 22:23:13] "GET /display_books HTTP/1.1" 200 -
+2023-12-10 22:23:13,893 - INFO - 127.0.0.1 - - [10/Dec/2023 22:23:13] "[36mGET /static/styles_display_books.css HTTP/1.1[0m" 304 -
+2023-12-10 22:23:47,697 - INFO - 127.0.0.1 - - [10/Dec/2023 22:23:47] "GET / HTTP/1.1" 200 -
+2023-12-10 22:23:48,002 - INFO - 127.0.0.1 - - [10/Dec/2023 22:23:48] "[36mGET /static/styles_index.css HTTP/1.1[0m" 304 -
+2023-12-10 22:23:50,223 - DEBUG - In display_books function: Books data from the database: [('To Kill A Mockingbird', 'Harper', 'Lee', 1, 'Audiobook')]
+2023-12-10 22:23:50,223 - DEBUG - In display_books function: Processed books for display: [{'title': 'To Kill A Mockingbird', 'author_first_name': 'Harper', 'author_last_name': 'Lee', 'read_status': 1, 'media': 'Audiobook'}]
+2023-12-10 22:23:50,226 - INFO - 127.0.0.1 - - [10/Dec/2023 22:23:50] "GET /display_books HTTP/1.1" 200 -
+2023-12-10 22:23:50,262 - INFO - 127.0.0.1 - - [10/Dec/2023 22:23:50] "[36mGET /static/styles_display_books.css HTTP/1.1[0m" 304 -

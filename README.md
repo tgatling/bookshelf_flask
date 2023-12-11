@@ -25,11 +25,18 @@ Before you begin, ensure you have met the following requirements:
 
 The project follows a specific structure to organize its components. Here is an overview:
 
-- `app.py`: The main application file.
-- `database/`: Includes database schema and setup scripts
-    - `schema.sql`: SQL script for the database schema.
-- `templates/`: Contains HTML templates.
-- `static/`: Contains static files such as CSS.
+- `app/`: The main application directory.
+    - `static/`: Contains static files such as CSS.
+    - `templates/`: Contains HTML templates.
+    - `database_functions.py`: houses database functions not directly related to routes.
+    - `db.py`: The database connection and table creation file.
+    - `routes.py`: Contains the application routes.
+- `database/`: Includes database schema and setup scripts.
+  - `data.sql`: SQL scripts for the database data necessary for running application.
+  - `schema.sql`: SQL script for the database schema. 
+- `.env.example`: File used to create the `.env` file containing the environmental variables.
+- `requirements.txt`: Contains the dependencies for running the application.
+- `run.py`: The main application file for running the application.
 
 ### Installation
 
