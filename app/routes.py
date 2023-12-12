@@ -12,6 +12,7 @@ def home():
 
 @app.route('/add_book', methods=['GET', 'POST'])
 def add_book():
+    # TODO: Fix author and genre drop down in form
     if request.method == 'POST':
         cursor = db.cursor()
 
@@ -25,6 +26,7 @@ def add_book():
 
             # AUTHOR
             # Check if the user selected an existing author or is adding a new one
+            # TODO: Toggle between adding and using existing author in form
             if 'existing_author' in request.form:
                 author_id = request.form['existing_author']
             else:
@@ -53,6 +55,8 @@ def add_book():
 
             # GENRE
             # Check if the user selected an existing genre or is adding a new one
+            # TODO: Fix blank genre being added to the database when no value given
+            # TODO: Toggle between adding and using existing genre in form
             if 'existing_genre' in request.form:
                 genre_id = request.form['existing_genre']
             else:
@@ -73,6 +77,7 @@ def add_book():
 
             # MEDIA
             # Get media_id based on media_name
+            # TODO: Set up display of media from the database in dropdown of form
             media = request.form['media']
             media_id = get_media_id(media)
             logging.debug(f"In function add_books: Selected Media ID: {media_id}")
