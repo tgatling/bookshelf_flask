@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, url_for
 from app import app
 from app.db import db
-from app.database_functions import get_author_id, get_genre_id, get_media_id
+from app.database_functions import get_author_id, get_genre_id, get_media_id, get_all_books
 import logging
 
 
@@ -106,21 +106,7 @@ def display_books():
 
     try:
         # Retrieve books from the database with author information
-        cursor.execute("""
-            SELECT books.title, authors.first_name, authors.last_name, books.read_status, media.media_name
-            FROM books 
-            JOIN authors ON books.author_id = authors.author_id
-            JOIN media ON books.media_id = media.media_id
-        """)
-        books_data = cursor.fetchall()
-
-        logging.debug(f"In display_books function: Books data from the database: {books_data}")
-
-        books = [
-            {"title": title, "author_first_name": author_first_name, "author_last_name": author_last_name,
-             "read_status": read_status, "media": media}
-            for title, author_first_name, author_last_name, read_status, media in books_data
-        ]
+        books = get_all_books()
 
         logging.debug(f"In display_books function: Processed books for display: {books}")
 
