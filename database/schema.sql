@@ -4,10 +4,10 @@ CREATE DATABASE IF NOT EXISTS bookshelf;
 -- Use the 'bookshelf' database
 USE bookshelf;
 
--- Create the 'media' table
-CREATE TABLE IF NOT EXISTS media (
-    media_id INT AUTO_INCREMENT PRIMARY KEY,
-    media_name VARCHAR(255) NOT NULL
+-- Create the 'medium' table
+CREATE TABLE IF NOT EXISTS medium (
+    medium_id INT AUTO_INCREMENT PRIMARY KEY,
+    medium_name VARCHAR(255) NOT NULL
 );
 
 -- Create the 'genre' table
@@ -33,9 +33,9 @@ CREATE TABLE IF NOT EXISTS books (
     description TEXT,
     image_url VARCHAR(255),
     external_url VARCHAR(255),
-    media_id INT,
+    medium_id INT,
     genre_id INT,
     FOREIGN KEY (author_id) REFERENCES authors(author_id),
-    FOREIGN KEY (media_id) REFERENCES media(media_id),
+    FOREIGN KEY (medium_id) REFERENCES medium(medium_id),
     FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
 );

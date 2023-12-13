@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, url_for
 from app import app
 from app.db import db
-from app.database_functions import get_author_id, get_genre_id, get_media_id, get_all_books
+from app.database_functions import get_author_id, get_genre_id, get_medium_id, get_all_books
 import logging
 
 
@@ -71,19 +71,19 @@ def add_book():
                     genre_id = cursor.fetchone()[0]
                     logging.debug(f"In function add_books: genre_id: {genre_id}")
 
-            # MEDIA
-            # Get media_id based on media_name
-            media = request.form['media']
-            media_id = get_media_id(media)
-            logging.debug(f"In function add_books: Selected Media ID: {media_id}")
+            # medium
+            # Get medium_id based on medium_name
+            medium = request.form['medium']
+            medium_id = get_medium_id(medium)
+            logging.debug(f"In function add_books: Selected medium ID: {medium_id}")
 
             # Insert book into the database
             query = """
                 INSERT INTO books 
-                (title, author_id, read_status, isbn, description, image_url, external_url, media_id, genre_id) 
+                (title, author_id, read_status, isbn, description, image_url, external_url, medium_id, genre_id) 
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
             """
-            values = (title, author_id, read_status, isbn, description, image_url, external_url, media_id, genre_id)
+            values = (title, author_id, read_status, isbn, description, image_url, external_url, medium_id, genre_id)
             logging.debug(f"In function add_books: values: {values}")
 
             cursor.execute(query, values)
