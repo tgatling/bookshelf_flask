@@ -1,7 +1,8 @@
 from flask import render_template, request, redirect, url_for
 from app import app
 from app.db import db
-from app.database_functions import get_author_id, get_genre_id, get_medium_id, get_all_books
+from app.database_functions import get_author_id, get_genre_id, get_medium_id
+from app.dao import BookDao
 import logging
 
 
@@ -106,7 +107,7 @@ def display_books():
 
     try:
         # Retrieve books from the database with author information
-        books = get_all_books()
+        books = BookDao.get_all_books()
 
         logging.debug(f"In display_books function: Processed books for display: {books}")
 
