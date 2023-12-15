@@ -1,5 +1,5 @@
 from app.db import cursor
-from app.models import Book
+from app.models import DisplayBooksResponseItem
 
 
 # def get_all_books():
@@ -25,25 +25,25 @@ from app.models import Book
 #     return books
 
 
-def get_author_id(author_first_name, author_last_name):
-    query = "SELECT author_id FROM authors WHERE first_name = %s AND last_name = %s"
-    cursor.execute(query, (author_first_name, author_last_name))
-    result = cursor.fetchone()
-    author_id = result[0] if result else None
-    return author_id
+# def get_author_id(author_first_name, author_last_name):
+#     query = "SELECT author_id FROM authors WHERE first_name = %s AND last_name = %s"
+#     cursor.execute(query, (author_first_name, author_last_name))
+#     result = cursor.fetchone()
+#     author_id = result[0] if result else None
+#     return author_id
 
 
-def get_genre_id(genre_name):
-    query = "SELECT genre_id FROM genres WHERE genre_name = %s"
-    cursor.execute(query, (genre_name,))
-    result = cursor.fetchone()
-    genre_id = result[0] if result else None
-    return genre_id
-
-
-def get_medium_id(medium_name):
-    query = "SELECT medium_id FROM medium WHERE medium_name = %s"
-    cursor.execute(query, (medium_name,))
-    result = cursor.fetchone()
-    medium_id = result[0] if result else None
-    return medium_id
+# def get_genre_id(genre_name):
+#     query = "SELECT genre_id FROM genres WHERE genre_name = %s"
+#     cursor.execute(query, (genre_name,))
+#     result = cursor.fetchone()
+#     genre_id = result[0] if result else None
+#     return genre_id
+#
+#
+# def get_medium_id(medium_name):
+#     query = "SELECT medium_id FROM medium WHERE medium_name = %s"
+#     cursor.execute(query, (medium_name,))
+#     result = cursor.fetchone()
+#     medium_id = result[0] if result else None
+#     return medium_id

@@ -1,9 +1,10 @@
 from flask import render_template, request, redirect, url_for
 from app import app
 from app.db import db
-from app.database_functions import get_author_id, get_genre_id, get_medium_id
-from app.dao import BookDao
+from app.dao import BookDao, AuthorDao, GenreDao, MediumDao
 import logging
+
+from app.models import Book, Author
 
 
 @app.route('/')
@@ -37,19 +38,12 @@ def add_book():
                 logging.debug(
                     f"In function add_books: Trying to get author_id for: {author_first_name} {author_last_name}")
 
-                author_id = get_author_id(author_first_name, author_last_name)
+                author = Author(author_first_name, author_last_name)
+                author_id = AuthorDao.get_id(author)
                 logging.debug(f"In function add_books: Retrieved author_id: {author_id}")
 
                 if not author_id:
-                    cursor.execute(
-                        "INSERT INTO authors (first_name, last_name) VALUES (%s, %s)",
-                        (author_first_name, author_last_name)
-                    )
-                    db.commit()
-
-                    # Retrieve the newly inserted author's ID
-                    cursor.execute("SELECT LAST_INSERT_ID()")
-                    author_id = cursor.fetchone()[0]
+                    author_id = AuthorDao.insert_item(author)
                     logging.debug(f"In function add_books: Inserted author_id: {author_id}")
 
             # GENRE
@@ -59,37 +53,22 @@ def add_book():
             else:
                 # If adding a new genre, insert into genres table
                 new_genre = request.form.get('new_genre', None)
-                genre_id = get_genre_id(new_genre)
+                genre_id = GenreDao.get_id(new_genre)
                 if not genre_id:
-                    cursor.execute(
-                        "INSERT INTO genres (genre_name) VALUES (%s)",
-                        (new_genre,)
-                    )
-                    db.commit()
-
-                    # Retrieve the newly inserted genre's ID
-                    cursor.execute("SELECT LAST_INSERT_ID()")
-                    genre_id = cursor.fetchone()[0]
+                    genre_id = GenreDao.get_id(new_genre)
                     logging.debug(f"In function add_books: genre_id: {genre_id}")
 
-            # medium
+            # Medium
             # Get medium_id based on medium_name
-            medium = request.form['medium']
-            medium_id = get_medium_id(medium)
+            medium_name = request.form['medium']
+            medium_id = MediumDao.get_id(medium_name)
             logging.debug(f"In function add_books: Selected medium ID: {medium_id}")
 
             # Insert book into the database
-            query = """
-                INSERT INTO books 
-                (title, author_id, read_status, isbn, description, image_url, external_url, medium_id, genre_id) 
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-            """
-            values = (title, author_id, read_status, isbn, description, image_url, external_url, medium_id, genre_id)
-            logging.debug(f"In function add_books: values: {values}")
-
-            cursor.execute(query, values)
-            db.commit()
-            logging.info(f"In function add_books: Book added successfully! {values}")
+            new_book = Book(title, author_id, read_status, isbn, description, image_url, external_url, medium_id,
+                            genre_id)
+            book_id = BookDao.insert_item(new_book)
+            logging.info(f"In function add_books: Book added successfully! {book_id}")
         except Exception as e:
             # An error occurred, rollback the transaction and handle the error
             db.rollback()
@@ -107,7 +86,7 @@ def display_books():
 
     try:
         # Retrieve books from the database with author information
-        books = BookDao.get_all_books()
+        books = BookDao.get_all_items()
 
         logging.debug(f"In display_books function: Processed books for display: {books}")
 
