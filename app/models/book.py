@@ -12,6 +12,11 @@ class Book:
         self.medium_id = medium_id
         self.genre_id = genre_id
 
+    def __str__(self):
+        return f"Book ID: {self.book_id}, Title: {self.title}, " \
+               f"Author ID: {self.author_id}, Read Status: {'Read' if self.read_status else 'Unread'}, " \
+               f"Medium ID: {self.medium_id}, Genre ID: {self.genre_id}"
+
 
 class DisplayBooksResponseItem:
     def __init__(self, book_id, title, author_first_name, author_last_name, read_status, medium, isbn, description,
@@ -27,3 +32,8 @@ class DisplayBooksResponseItem:
         self.image_url = image_url
         self.external_url = external_url
         self.genre = genre
+
+    def __str__(self):
+        return f"Book ID: {self.book_id}, Title: {self.title}, " \
+               f"Author: {self.author_first_name} {self.author_last_name}, " \
+               f"Read Status: {'Read' if self.read_status else 'Unread'}, Medium: {self.medium}, Genre: {self.genre}"

@@ -4,7 +4,7 @@ from app.db import db
 from app.dao import BookDao, AuthorDao, GenreDao, MediumDao
 import logging
 
-from app.models import Book, Author
+from app.models import Book, Author, DisplayBooksResponseItem, Genre
 
 
 @app.route('/')
@@ -36,15 +36,15 @@ def add_book():
 
                 # Print debug
                 logging.debug(
-                    f"In function add_books: Trying to get author_id for: {author_first_name} {author_last_name}")
+                    f"In routes add_books - Trying to get author_id for: {author_first_name} {author_last_name}")
 
                 author = Author(author_first_name, author_last_name)
                 author_id = AuthorDao.get_id(author)
-                logging.debug(f"In function add_books: Retrieved author_id: {author_id}")
+                logging.debug(f"In routes add_books - Retrieved author_id: {author_id}")
 
                 if not author_id:
                     author_id = AuthorDao.insert_item(author)
-                    logging.debug(f"In function add_books: Inserted author_id: {author_id}")
+                    logging.debug(f"In routes add_books - Inserted author_id: {author_id}")
 
             # GENRE
             # Check if the user selected an existing genre or is adding a new one
@@ -54,25 +54,25 @@ def add_book():
                 # If adding a new genre, insert into genres table
                 new_genre = request.form.get('new_genre', None)
                 genre_id = GenreDao.get_id(new_genre)
-                if not genre_id:
-                    genre_id = GenreDao.get_id(new_genre)
-                    logging.debug(f"In function add_books: genre_id: {genre_id}")
+                if not genre_id and new_genre is not None:
+                    genre_id = GenreDao.insert_item(Genre(new_genre))
+                    logging.debug(f"In routes add_books - genre_id: {genre_id}")
 
             # Medium
             # Get medium_id based on medium_name
             medium_name = request.form['medium']
             medium_id = MediumDao.get_id(medium_name)
-            logging.debug(f"In function add_books: Selected medium ID: {medium_id}")
+            logging.debug(f"In routes add_books - Selected medium ID: {medium_id}")
 
             # Insert book into the database
             new_book = Book(title, author_id, read_status, isbn, description, image_url, external_url, medium_id,
                             genre_id)
             book_id = BookDao.insert_item(new_book)
-            logging.info(f"In function add_books: Book added successfully! {book_id}")
+            logging.info(f"In routes add_books - Book added successfully! {book_id}")
         except Exception as e:
             # An error occurred, rollback the transaction and handle the error
             db.rollback()
-            logging.error(f"In function add_books: Error: {str(e)}")
+            logging.error(f"In routes add_books - Error: {str(e)}")
         finally:
             cursor.close()
         return redirect(url_for('home'))
@@ -88,14 +88,16 @@ def display_books():
         # Retrieve books from the database with author information
         books = BookDao.get_all_items()
 
-        logging.debug(f"In display_books function: Processed books for display: {books}")
+        for book in books:
+            logging.debug(
+                f"In routes display_books - Processed book for display: {book.__str__()}")
 
         return render_template('display_books.html', books=books)
     except Exception as e:
-        logging.error(f"In display_books function: Error retrieving and displaying books: {str(e)}")
+        logging.error(f"In routes display_books - Error retrieving and displaying books: {str(e)}")
     finally:
         cursor.close()
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

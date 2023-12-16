@@ -1,1 +1,1 @@
-from dao import BookDao, AuthorDao, GenreDao, MediumDao
+from .dao import BookDao, AuthorDao, GenreDao, MediumDao
