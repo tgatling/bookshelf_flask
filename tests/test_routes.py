@@ -1,6 +1,7 @@
 import pytest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 from app.routes import app
+from .test_data import *
 
 
 @pytest.fixture
@@ -42,16 +43,16 @@ def test_add_book_with_new_author_genre_post_request(mock_book_insert, mock_medi
     mock_book_insert.return_value = 1
 
     mock_data = {
-        "title": "Test Book",
-        "read_status": 1,
-        "isbn": "1234567890",
-        "description": "This is a test book description",
-        "image_url": "https://example.com/image.jpg",
-        "external_url": "https://example.com/",
-        "author_first_name": "Test",
-        "author_last_name": "Author",
-        "new_genre": "1",
-        "medium": "1"
+        "title": test_title,
+        "read_status": test_read_status,
+        "isbn": test_isbn,
+        "description": test_description,
+        "image_url": test_image_url,
+        "external_url": test_external_url,
+        "author_first_name": test_author_first_name,
+        "author_last_name": test_author_last_name,
+        "new_genre": test_genre_name,
+        "medium": test_medium_name_audiobook
     }
 
     res = client.post('/add_book', data=mock_data)
@@ -87,15 +88,15 @@ def test_add_book_with_existing_author_genre_post_request(mock_book_insert, mock
     mock_book_insert.return_value = 1
 
     mock_data = {
-        "title": "Test Book",
-        "read_status": 1,
-        "isbn": "1234567890",
-        "description": "This is a test book description",
-        "image_url": "https://example.com/image.jpg",
-        "external_url": "https://example.com/",
-        "existing_author": "Test Author",
-        "existing_genre": "Ebook",
-        "medium": "1"
+        "title": test_title,
+        "read_status": test_read_status,
+        "isbn": test_isbn,
+        "description": test_description,
+        "image_url": test_image_url,
+        "external_url": test_external_url,
+        "existing_author": test_author_full_name,
+        "existing_genre": test_genre_name,
+        "medium": test_medium_name_audiobook
     }
 
     res = client.post('/add_book', data=mock_data)
@@ -118,15 +119,15 @@ def test_display_books_ebook(mock_get_all_items, client):
     # Create a mock book object
     mock_ebook = {
         "title": "Test Ebook",
-        "read_status": 1,
-        "isbn": "1234567890",
-        "description": "This is a test book description",
-        "image_url": "https://example.com/image.jpg",
-        "external_url": "https://example.com/",
-        "author_first_name": "Test",
-        "author_last_name": "Author",
-        "genre": "1",
-        "medium": "Ebook"
+        "read_status": test_read_status,
+        "isbn": test_isbn,
+        "description": test_description,
+        "image_url": test_image_url,
+        "external_url": test_external_url,
+        "author_first_name": test_author_first_name,
+        "author_last_name": test_author_last_name,
+        "genre": test_genre_name,
+        "medium": test_medium_name_ebook
     }
 
     # Configure the mock to return a list of one book when called.
@@ -145,15 +146,15 @@ def test_display_books_audiobook(mock_get_all_items, client):
     # Create a mock book object
     mock_audiobook = {
         "title": "Test Audiobook",
-        "read_status": 1,
-        "isbn": "1234567890",
-        "description": "This is a test book description",
-        "image_url": "https://example.com/image.jpg",
-        "external_url": "https://example.com/",
-        "author_first_name": "Test",
-        "author_last_name": "Author",
-        "genre": "1",
-        "medium": "Ebook"
+        "read_status": test_read_status,
+        "isbn": test_isbn,
+        "description": test_description,
+        "image_url": test_image_url,
+        "external_url": test_external_url,
+        "author_first_name": test_author_first_name,
+        "author_last_name": test_author_last_name,
+        "genre": test_genre_name,
+        "medium": test_medium_name_audiobook
     }
 
     # Configure the mock to return a list of one book when called.
@@ -172,15 +173,15 @@ def test_display_books_physical(mock_get_all_items, client):
     # Create a mock book object
     mock_ebook = {
         "title": "Test Physical Book",
-        "read_status": 1,
-        "isbn": "1234567890",
-        "description": "This is a test book description",
-        "image_url": "https://example.com/image.jpg",
-        "external_url": "https://example.com/",
-        "author_first_name": "Test",
-        "author_last_name": "Author",
-        "genre": "1",
-        "medium": "Physical"
+        "read_status": test_read_status,
+        "isbn": test_isbn,
+        "description": test_description,
+        "image_url": test_image_url,
+        "external_url": test_external_url,
+        "author_first_name": test_author_first_name,
+        "author_last_name": test_author_last_name,
+        "genre": test_genre_name,
+        "medium": test_medium_name_physical
     }
 
     # Configure the mock to return a list of one book when called.
