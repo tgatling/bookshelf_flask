@@ -19,6 +19,24 @@ try:
 
     cursor = db.cursor()
 
+    # Create medium table if not exists
+    cursor.execute("""
+            CREATE TABLE IF NOT EXISTS medium (
+                medium_id INT AUTO_INCREMENT PRIMARY KEY,
+                medium_name VARCHAR(255) NOT NULL
+            )
+        """)
+    db.commit()
+
+    # Create genres table if not exists
+    cursor.execute("""
+            CREATE TABLE IF NOT EXISTS genres (
+                genre_id INT AUTO_INCREMENT PRIMARY KEY,
+                genre_name VARCHAR(255) NOT NULL
+            )
+        """)
+    db.commit()
+
     # Create authors table if not exists
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS authors (
@@ -36,8 +54,15 @@ try:
             title VARCHAR(255),
             author_id INT,
             read_status BOOLEAN,
-            media VARCHAR(20),
-            FOREIGN KEY (author_id) REFERENCES authors(author_id)
+            isbn VARCHAR(20),
+            description TEXT,
+            image_url VARCHAR(255),
+            external_url VARCHAR(255),
+            medium_id INT,
+            genre_id INT,
+            FOREIGN KEY (author_id) REFERENCES authors(author_id),
+            FOREIGN KEY (medium_id) REFERENCES medium(medium_id),
+            FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
         )
     """)
     db.commit()
@@ -47,4 +72,4 @@ except mysql.connector.Error as e:
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

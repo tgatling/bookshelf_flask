@@ -10,9 +10,9 @@
     <h1>Book List</h1>
 
     <h2>Physical Books:</h2>
-    {% if books|selectattr('media', 'equalto', 'Physical')|list %}
+    {% if books|selectattr('medium', 'equalto', 'Physical')|list %}
         <ul>
-            {% for book in books if book.media == 'Physical' %}
+            {% for book in books if book.medium == 'Physical' %}
                 <li>{{ book.title }} by {{ book.author_first_name }} {{ book.author_last_name }} - {% if book.read_status %}Read{% else %}Unread{% endif %}</li>
             {% endfor %}
         </ul>
@@ -21,9 +21,9 @@
     {% endif %}
 
     <h2>Ebooks:</h2>
-    {% if books|selectattr('media', 'equalto', 'Ebook')|list %}
+    {% if books|selectattr('medium', 'equalto', 'Ebook')|list %}
         <ul>
-            {% for book in books if book.media == 'Ebook' %}
+            {% for book in books if book.medium == 'Ebook' %}
                 <li>{{ book.title }} by {{ book.author_first_name }} {{ book.author_last_name }} - {% if book.read_status %}Read{% else %}Unread{% endif %}</li>
             {% endfor %}
         </ul>
@@ -32,9 +32,9 @@
     {% endif %}
 
     <h2>Audiobooks:</h2>
-    {% if books|selectattr('media', 'equalto', 'Audiobook')|list %}
+    {% if books|selectattr('medium', 'equalto', 'Audiobook')|list %}
         <ul>
-            {% for book in books if book.media == 'Audiobook' %}
+            {% for book in books if book.medium == 'Audiobook' %}
                 <li>{{ book.title }} by {{ book.author_first_name }} {{ book.author_last_name }} - {% if book.read_status %}Read{% else %}Unread{% endif %}</li>
             {% endfor %}
         </ul>
@@ -42,8 +42,9 @@
         <p>There are currently no audiobooks in your collection.</p>
     {% endif %}
 
-    <form action="{{ url_for('index') }}">
-        <button type="submit">Back</button>
-    </form>
+<form action="{{ url_for('home') }}">
+    <button class="styled-button" type="submit">Back to Home</button>
+</form>
+
 </body>
 </html>
