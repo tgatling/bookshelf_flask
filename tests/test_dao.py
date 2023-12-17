@@ -1,31 +1,6 @@
 from unittest import mock
 from app.dao.dao import BookDao, AuthorDao, GenreDao, MediumDao
-from app.models import Book, Author, Genre, Medium, DisplayBooksResponseItem
 import pytest
-
-mock_book_id = 1
-mock_title = "Test Title"
-mock_reading_status = 1
-mock_isbn = 1234567890
-mock_description = "This is a test book description"
-mock_image_url = "https://example.com/image.jpg"
-mock_external_url = "https://example.com/"
-mock_author_id = 1
-mock_genre_id = 1
-mock_medium_id = 1
-
-mock_author_first_name = "Test"
-mock_author_last_name = "Author"
-mock_genre = "Programming"
-mock_medium = "Ebook"
-
-mock_book = Book(mock_title, mock_reading_status, mock_isbn, mock_description, mock_image_url, mock_external_url,
-                 mock_author_id, mock_genre_id, mock_medium_id)
-
-mock_display_book_response_item = DisplayBooksResponseItem(mock_book_id, mock_title, mock_author_first_name,
-                                                           mock_author_last_name, mock_reading_status, mock_medium,
-                                                           mock_isbn, mock_description, mock_image_url,
-                                                           mock_external_url, mock_genre)
 
 
 # Define a fixture that will be used to mock db
