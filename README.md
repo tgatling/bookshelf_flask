@@ -88,7 +88,7 @@ Open your web browser and go to http://localhost:5000.
 
 1. Ensure that you have PyTest installed. If not, install using:
     ```bash
-    pip install pytest
+    pip install pytest pytest pytest-flask
     ```
 2. Navigate to the project's root directory in the terminal.
 3. Run the PyTest command to discover and run tests:
